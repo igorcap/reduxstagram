@@ -10,6 +10,11 @@ import App from './components/App'
 import Single from './components/Single'
 import Photogrid from './components/Photogrid'
 
+import Raven from 'raven-js'
+import { sentry_url} from './data/config'
+
+Raven.config(sentry_url).install()
+
 //import react router deps
 import { Router, Route, IndexRoute, browserHistory} from 'react-router'
 import { Provider } from 'react-redux'
